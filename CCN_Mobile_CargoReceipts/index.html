@@ -17,32 +17,50 @@
     <div id="tabstrip-home"
         data-role="view"
         data-title="CCN">        
-        <div class="view-content">               
+        <div class="view-content">                           
             <h1 class="welcome">Cargo Receipts</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label> AWB No. </label>    
+                    </td>
+                    <td>
+                        <input type="text" id="AwbTest">
+                    </td>
+                    <td>
+                       <a href="#tabstrip-history" data-icon="organize" data-role="button"  text-align="right"></a>
+                    </td>
+                 </tr>
+            </table>                                
             <ul data-role="listview" data-style="inset">
                 <li>
                     <span class="settingLabelspan"> AWB No:</span>
-                    <input id="AWBNoTxt" type="text" />
-                </li>                                                    
+                    <input id="AWBNoTxt" type="text"  />                                        
+                </li>                                                                    
                 <li>
                      <span class="settingLabelspan"> Issued Date:</span>
                      <input id="IssueDateTxt" type="text" />
+                      <a href="#tabstrip-history" data-icon="organize" data-role="button"  text-align="right"></a>
                  </li>                                                                    
                 <li>
                      <span class="settingLabelspan"> Origin:</span>
                      <input id="OriginTxt" type="text" />
+                    <a href="#tabstrip-history" data-icon="search" data-role="button"  text-align="right"></a>
                 </li>
                 <li>
                      <span class="settingLabelspan"> Destination:</span>
                      <input id="DestinationTxt" type="text" />
+                     <a href="#tabstrip-history" data-icon="search" data-role="button"  text-align="right"></a>
                 </li>                
-             </ul>            
+             </ul> 
+                    
+            
         </div>
         <p></p>
         <div class="buttonArea">
-              <!--<input type="button" id="SearchBtn" data-role="button" value="Search" class="common-button" data-event="#lookup-layout" />  
-              <a data-align="center" data-role="button" class="common-button" href="#lookup-layout">Search</a>-->  
             <a data-align="center" data-role="button" class="common-button" href="LookupTab.html">Search</a>                    
+            <p></p>
+            <a data-align="center" data-role="button" class="common-button" href="Test1.html">TEST</a>                    
         </div>                
     </div>
 
@@ -108,12 +126,7 @@
             </div>
         </div>
     </div>
-    
-      <!--<div data-role="view" id="secondview" data-layout="mobile-view" data-title="Local View">
-        <div style="background: url(../../content/shared/images/patterns/pattern7.png); color: #fff; padding: 50px 0; text-align: center;"><p>Hi, I'm a local view.</p></div>
-        </div> -->
-
-    
+        
     <!--Layout-->
     <div data-role="layout" data-id="tabstrip-layout">
         <!--Header-->
@@ -127,7 +140,8 @@
         <div data-role="footer">
             <div data-role="tabstrip">
                 <a href="#tabstrip-home" data-icon="home">Home</a>
-                <a href="#tabstrip-history" data-icon="history">History</a>  
+                <!--<a href="#tabstrip-history" data-icon="history">History</a>  -->
+                <a href="LookupTab.html" data-icon="history">History</a>  
                 <a href="#tabstrip-settings" data-icon="settings">Settings</a>
                 <a href="#tabstrip-share" data-icon="share">Shared</a>
             </div>
@@ -136,7 +150,7 @@
     
     
    <script>
-        //var app = new kendo.mobile.Application(document.body, { transitional : "slide", layout: "tabstrip-layout",initital: "tabstrip-home" });                       
+        var app = new kendo.mobile.Application(document.body, { transitional : "slide", layout: "tabstrip-layout",initital: "tabstrip-home" });                       
    </script>
 
 </body>
