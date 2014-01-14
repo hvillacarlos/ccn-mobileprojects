@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title></title>
+     <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="scripts/app.js"></script>        
+        
+    </head>
+    <body>
+   <div data-role="view">
+       <div data-role="header">Header</div>
+        <a data-role="button">Click Me!</a>
+       <div data-role="footer">Footer</div>
+   </div>
+        
+        <div data-role="view" id="foo">Foo <a href="#bar" data-role="button">Go to Bar</a></div>
+        <div data-role="view" id="bar">Bar <a href="#foo" data-role="button">Go to Foo</a></div>
+
+   <script>
+        // the content of the document.body is used by default
+       var app = new kendo.mobile.Application();
+   </script>
+</body>      
+</html>
