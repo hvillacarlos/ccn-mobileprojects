@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> CCN Cargo Receipts</title>
+    <title> CCN Cargo Receipts</title>	
     <meta charset="utf-8" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
@@ -10,10 +10,8 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>    
     <script src="scripts/app.js"></script>
-		<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
-    <script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
-    
-
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>    
 </head>
 <body>
     <!--Home-->
@@ -41,7 +39,9 @@
                 </li>                
              </ul>                   
             <button class="button dh" id="btnOpenPDF">Open PDF</button>
+            <a data-click="openPDF" data-role="button" data-align="left"> PDF </a>
         </div>
+        <div id="infoField" type="text" readonly="readonly"></div>
         <p></p>
         <div class="buttonArea">
             <a data-align="center" data-role="button" class="common-button" href="LookupTab.html">Search</a>                    
@@ -131,6 +131,19 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        function openPDF()
+            {                                            
+                var url = window.location.href.replace('index.html', 'sample.pdf');                
+                url = url.replace('#Test1.html','');   
+                url = url.replace('sample.pdf#/','Sample.pdf');
+                alert (url);
+                
+                window.open(url, '_blank');                                                                
+            }
+        
+    </script>
     
     
    <script>

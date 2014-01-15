@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<link href="styles/main_pdf.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-		<script type="text/javascript" charset="utf-8" src="scripts/main_PDF.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/main_PDF.js"></script>         
 	</head>
 	<body>
 		<header class="header">
@@ -14,7 +14,8 @@
 		</header>        
 		<div class="content">
             <div class="action-area ch40">
-                <button class="button dh" id="btnOpenPDF">Open PDF</button>
+                <button class="button dh" id="btnOpenPDF2">Open PDF</button>    
+                <a data-click="openPDF" data-role="button" data-align="left"> PDF </a>
 			</div>
             <div class="result-area ch60">
                 <div class="results">
@@ -26,6 +27,80 @@
 		</div>
 		<footer class="footer">
 			<div>Cordova API Samples</div>
-		</footer>
-	</body>
+		</footer>	               
+
+        <script>
+            
+              //  document.addEventListener("deviceready", onDeviceReady, false);
+              //  document.addEventListener("touchstart", function() {}, false);
+              //  alert("Calling main for Cordova..")
+                
+                //function onDeviceReady() 
+                //{
+            //    alert("Calling main on device ready..")
+	             //       navigator.splashscreen.hide();
+            //      var app = new Application();
+		    //     app.Run();
+	             //}
+                                    
+           // $("#btnOpenPDF").click(function() {
+                     
+              /*  var url = window.location.href.replace('Test1.html', 'sample.pdf');
+                alert (url); 
+                if (device.platform == 'iPad' || device.platform == 'iPhone') {
+                    alert ("again" + url );
+                    window.plugins.childBrowser.showWebPage(url);
+                } else if (device.platform == 'Android') {
+             
+                    url = url.replace('http', 'file');
+                    window.plugins.childBrowser.openExternal(url);
+                }*/
+           // });
+            
+            function openPDF()
+            {
+                                
+                alert ("Call OPENPDF");
+                
+                var url = window.location.href.replace('index.html', 'sample.pdf');                
+                url = url.replace('#Test1.html','');                       
+                alert (url);
+                window.open(url, '_blank');
+                //window.plugins.childBrowser.showWebPage(url);
+        /*      var infoDiv = document.getElementById("infoField");
+		        var path = this.getWorkingFolder().replace('http://', 'file://') + "Sample.pdf";
+		        infoDiv.innerText = path;
+        */
+        		if (device.platform === 'Android') {
+                    alert("Android");
+			        window.open(url, '_system');
+		        }
+		        else {
+                    alert ("Iphone");
+			        window.open(url, '_blank');
+		         }
+                
+/*                if (device.uuid == "e0101010d38bde8e6740011221af335301010333" || device.uuid == "e0908060g38bde8e6740011221af335301010333") 
+                {
+    	        	alert("Not Supported in Simulator.");
+	            }
+                else
+                {
+                    alert ("Not called");
+                }
+                
+                if (device.platform == 'iPad' || device.platform == 'iPhone') {                     
+                    window.plugins.childBrowser.showWebPage(url);
+                } else if (device.platform == 'Android') {
+             
+                    url = url.replace('http', 'file');
+                    window.plugins.childBrowser.openExternal(url);
+                }                
+*/                
+            }                        
+            
+        </script>
+        
+        
+    </body>    
 </html>
