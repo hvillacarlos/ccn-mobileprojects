@@ -8,8 +8,11 @@
 
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>    
     <script src="scripts/app.js"></script>
+		<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
+    
 
 </head>
 <body>
@@ -26,7 +29,7 @@
                 </li>                                                                    
                 <li>
                      <span class="settingLabelspan"> Issued Date </span>                         
-                      <input id="IssueDateTxt" type="date" />                    
+                      <input id="IssueDateTxt" type="date" value="2014-01-01" />                    
                  </li>                                                                    
                 <li>
                      <span class="settingLabelspan"> Origin</span>
@@ -36,14 +39,13 @@
                      <span class="settingLabelspan"> Destination</span>
                      <input id="DestinationTxt" type="text" />                     
                 </li>                
-             </ul> 
-                    
-            
+             </ul>                   
+            <button class="button dh" id="btnOpenPDF">Open PDF</button>
         </div>
         <p></p>
         <div class="buttonArea">
             <a data-align="center" data-role="button" class="common-button" href="LookupTab.html">Search</a>                    
-        </div>                
+        </div>               
     </div>
 
     <!--History-->
